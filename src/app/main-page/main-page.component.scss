@@ -1,0 +1,109 @@
+.main-wrapper {
+  // TODO: remove fixed width in the future
+  width: 60vw;
+  display: flex;
+  // border: 1px solid black;
+  padding: 0.2rem;
+  aspect-ratio: 8/5;
+  background: var(--white);
+  border-color: transparent;
+  border-radius: 2rem;
+  box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.5);
+  //align-items: center;
+}
+
+.page-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  //justify-content: space-between;
+  padding: 4rem;
+  & h1 {
+    font-size: calc(1.5rem + 1.5vw);
+    color: var(--dark-slate-grey);
+    margin: 0 0 0.5rem 0;
+  }
+  & h2 {
+    font-size: calc(0.2rem + 0.8vw);
+    font-weight: 400;
+  }
+  & ul {
+    padding: 0;
+    font-size: calc(0.1rem + 0.8vw);
+    margin-bottom: 1.5rem;
+  }
+  & li {
+    list-style: none;
+    background: url("/assets/images/icon-list.svg") no-repeat 0 8px;
+    line-height: 40px;
+    padding-left: 2.5rem;
+  }
+  & input {
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  & button {
+    padding: 1.2rem;
+    border-color: transparent;
+    border-radius: 0.6rem;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+      background: rgb(230,0,93);
+      background: linear-gradient(90deg, rgba(230,0,93,1) 0%, rgba(255,89,0,1) 100%);
+      transform: translateY(3px);
+      box-shadow: 3px 30px 50px 0 rgba(204, 31, 13, 0.5);
+    }
+  }
+}
+
+//@keyframes buttonBackground {
+//  from {background-color: var(--dark-slate-grey);}
+//  to {background: linear-gradient(90deg, rgba(230,0,93,1) 0%, rgba(255,89,0,1) 100%);}
+//}
+
+.side-image-wrapper {
+  margin: 1rem;
+  flex: 1;
+  background-image: url("/assets/images/illustration-sign-up-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+
+.email-field {
+  display: flex;
+  flex-direction: column;
+  & label {
+    font-weight: bold;
+    font-size: calc(0.1rem + 1vw);
+  }
+  & input {
+    cursor: pointer;
+
+  }
+}
+
+.email-field-label-container {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  & p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: red;
+  }
+}
+
+.error {
+  color: red;
+  background: rgba(255, 0, 0 ,0.3);
+  border-color: red;
+}

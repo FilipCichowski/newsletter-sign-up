@@ -1,0 +1,25 @@
+<main>
+  <div class="main-wrapper">
+    <section class="page-content">
+        <h1>Stay updated!</h1>
+        <h2>Join 60,000+ product managers receiving monthly updates on:</h2>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+      <form [formGroup]="userEmail">
+        <div class="email-field">
+          <div class="email-field-label-container">
+            <label for="email">Email address</label>
+            <p *ngIf="userEmail.get('primaryEmail')?.invalid && userEmail.get('primaryEmail')?.touched">Valid email required</p>
+          </div>
+          <input id="email" type="email" placeholder="email@company.com" formControlName="primaryEmail" [ngClass]="{'error': userEmail.get('primaryEmail')?.invalid && userEmail.get('primaryEmail')?.touched}">
+        </div>
+      </form>
+        <button>Subscribe to monthly newsletter</button>
+    </section>
+    <aside class="side-image-wrapper">
+    </aside>
+  </div>
+</main>
